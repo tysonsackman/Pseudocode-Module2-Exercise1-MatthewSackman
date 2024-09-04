@@ -1,0 +1,24 @@
+START
+    // Define the constant for cubic inches in a cubic foot
+    CONSTANT CUBIC_INCHES_PER_CUBIC_FOOT = 1728
+
+    // Input
+    PRINT "Enter the refrigerator model name: "
+    INPUT refrigeratorModelName
+    PRINT "Enter the interior height in inches: "
+    INPUT heightInInches
+    PRINT "Enter the interior width in inches: "
+    INPUT widthInInches
+    PRINT "Enter the interior depth in inches: "
+    INPUT depthInInches
+
+    // Process
+    // Calculate the capacity in cubic feet
+    COMPUTE volumeInCubicInches = heightInInches * widthInInches * depthInInches
+    COMPUTE capacityInCubicFeet = volumeInCubicInches / CUBIC_INCHES_PER_CUBIC_FOOT
+
+    // Output
+    PRINT "Refrigerator Model Name: " + refrigeratorModelName
+    PRINT "Capacity in cubic feet: " + capacityInCubicFeet
+
+END
