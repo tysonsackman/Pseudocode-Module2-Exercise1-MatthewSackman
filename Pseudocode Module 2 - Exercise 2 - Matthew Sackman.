@@ -1,0 +1,22 @@
+START
+    // Housekeeping: Set up the initial variables
+    SET accountBalance = 0
+    SET overdrawnFeePerOccurrence = 5
+    SET feePercentage = 0.01
+
+    // Input: Collect user information
+    PRINT "Enter the current account balance: "
+    INPUT accountBalance
+    PRINT "Enter the number of times the account was overdrawn: "
+    INPUT timesOverdrawn
+
+    // Process: Calculate the fee and the new account balance
+    COMPUTE feeForOverdrawnAccount = (accountBalance * feePercentage) + (timesOverdrawn * overdrawnFeePerOccurrence)
+    COMPUTE newAccountBalance = accountBalance - feeForOverdrawnAccount
+
+    // Output: Display the results
+    PRINT "The calculated fee is: $" + feeForOverdrawnAccount
+    PRINT "The new account balance is: $" + newAccountBalance
+    PRINT "Thanks for using this program"
+
+END
